@@ -1,0 +1,55 @@
+body {
+  background: url('background.jpg') no-repeat center center fixed; 
+  background-size: 100% 100%;
+  color: #e2e2e3;
+  font-family: 'Poiret One', cursive;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.00em;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.250em;
+  color: #222222;
+  font-weight: bolder;
+}
+
+section {
+  margin-right: 6%;
+}
+
+#title {
+  font-family: 'Meddon', cursive;
+  font-size: 5.00em;
+  margin: 0 0 0 0;
+  color: white;
+}
+
+#opening_header {
+  background: url('grey_wash_wall.png');
+  opacity: 0.2;
+  width: 90%;
+  margin: 3% auto 0 auto;
+  text-align: center;
+  padding: 5% 0;
+  border-radius: 10px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all .7s ease;
+}
+
+#opening_header:hover {
+  opacity: 0.9;
+}
+
+.banner { position: relative; overflow: auto; text-align: center; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
