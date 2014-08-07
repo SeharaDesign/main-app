@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'
 
+  resources :products
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Example of regular route:
