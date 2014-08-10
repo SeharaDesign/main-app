@@ -24,6 +24,10 @@ section {
   margin-right: 6%;
 }
 
+a {
+  text-decoration: none;
+}
+
 #title {
   font-family: 'Meddon', cursive;
   font-size: 5.00em;
@@ -43,11 +47,31 @@ section {
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
-  transition: all .7s ease;
+  transition: all 1s ease;
 }
 
 #opening_header:hover {
   opacity: 0.9;
+}
+
+.enter {
+  margin: 5% 0;
+}
+
+.enter a {
+  padding: 3% 6%;
+  margin-top: 5%;
+  border-radius: 5px;
+  border: 2px solid crimson;
+  background-color: #580818;
+  color: white;
+  font-size: 1.500em;
+  font-weight: bolder;
+}
+
+.enter a:hover {
+  background-color: #420612;
+  border: 3px solid black;
 }
 
 .banner { position: relative; overflow: auto; text-align: center; }
