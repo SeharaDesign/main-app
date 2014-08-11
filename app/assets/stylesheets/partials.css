@@ -1,0 +1,37 @@
+.nav {
+  opacity: 0.75;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  position: fixed;
+  width: 100%;
+}
+
+.nav:hover {
+  opacity: 1.0;
+}
+
+.nav ul {
+  background-color: #FF7F50;
+  margin: 0;
+}
+
+.nav li:first-child {
+  font-family: Meddon, cursive;
+  font-size: 1.700em;
+}
+
+.nav li:first-child a {
+  color: #5e5eff;
+}
+
+.nav li {
+  color: white;
+  display: inline-block;
+  padding: 2%;
+  font-size: 1.400em;
+  font-weight: 900;
+}
+
