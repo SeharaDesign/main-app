@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# Initial products for Sehara
+
+hera = Product.create!(
+  name: "Hera",
+  description: "This uniquely stunning double-tiered Rhinestone crown is accented with Swarvoski crystals, Oval pearls, and Calla Lillies and is hand wired with your choice of white or ivory double-faced Satin ribboning.",
+  price: 300
+)
+
+selene = Product.create!(
+  name: "Selene",
+  description: "These shimmering gold crowns are embellished with hand-wired pearls, Swarvoski crystals, mercury glass beads, handcrafted calla lillies, and joined together with your choice of white or ivory double-faced satin ribboning and pearl accented bows.",
+  price: 285
+)
+
+rhea = Product.create!(
+  name: "Rhea",
+  description: "There is a traditional elegance to this crown of two-pearl stamen with accents of Swarovski crystal and Rhinestone Edelweiss flowers delicately wired with Bicones and a white double-faced satin ribboning.",
+  price: 235
+)
+
