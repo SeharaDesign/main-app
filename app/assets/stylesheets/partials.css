@@ -7,6 +7,7 @@
   transition: all 1s ease;
   position: fixed;
   width: 100%;
+  background-color: #FF7F50;
 }
 
 .nav:hover {
@@ -14,8 +15,8 @@
 }
 
 .nav ul {
-  background-color: #FF7F50;
   margin: 0;
+  display: inline;
 }
 
 .nav li:first-child {
@@ -31,7 +32,21 @@
   color: white;
   display: inline-block;
   padding: 2%;
+  padding-left: 0;
   font-size: 1.400em;
   font-weight: 900;
 }
+
+.nav i::before {
+  color: #5e5eff;
+  font-size: 50px;
+  margin: 0; 
+}
+
+.nav aside {
+  display: inline-block;
+  float: right;
+  margin: 2% 2% 0 0;
+}
+
 

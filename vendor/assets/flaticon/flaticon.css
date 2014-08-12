@@ -11,9 +11,10 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
+  font-size: 40px;
+	font-style: normal;
+	margin-left: 20px;
+	color: #5e5eff;
 }.flaticon-crown32:before {
 	content: "\e000";
 }
