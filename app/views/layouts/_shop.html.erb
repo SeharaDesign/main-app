@@ -1,0 +1,21 @@
+<section class="dark-container">
+
+  <h1>The Shop @ Sehara</h1>
+
+  <% @products.each do |product| %>
+    <%= link_to(product) do %>
+      <div class="showcase">
+        <h2><%= product.name %></h2>
+        <%= image_tag product.showcase_image %>    
+      </div>
+    <% end %>
+  <% end %>
+
+  <div id='couture'> 
+    <i class="flaticon-opened4"></i>
+    <h1>
+      <%= mail_to "seharadesign@gmail.com", "Contact Us Directly Regarding Couture Designs", { :subject => "Interested in Couture Crown Design", :body => "Hi Sehara,\n\nI am very interested in a customized, one-of-a-kind design for wedding crowns.\n\nTELL US ANY OR ALL OF YOUR IDEAS HERE..." } %>
+    </h1>
+  </div> 
+
+</section>

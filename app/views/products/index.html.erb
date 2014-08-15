@@ -1,6 +1,13 @@
 <%= render partial: "layouts/nav" %>
 
-<div class="container">
+<%= render partial: "layouts/header_slider" %>
+
+<%= render partial: "layouts/shop" %>
+
+<%= render partial: "layouts/about" %>
+
+
+<div class="dark-container">
 
   <h1>The Shop @ Sehara</h1>
 
@@ -11,26 +18,50 @@
   </ul>
 
   <div class="tab" id="tab1">
-      <h2>First tab</h2>
-      <%= image_tag "https://s3-us-west-2.amazonaws.com/sehara/crownphotosS3/IMG_9756.jpg" %>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <header>
+      <h2>Price: $<%= @hera.price %></h2>
+      <p><%= @hera.description %></p>
+    </header>
+    <div id="masonry-grid" class="js-masonry"
+  data-masonry-options='{ "columnWidth": 450, "itemSelector": ".item", "gutter": 10, "isFitWidth": "true" }'>
+      <% @hera_images.each do |img| %>
+        <div class="empty"></div>
+        <div class="item">
+          <%= image_tag img %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div class="tab" id="tab2">
-      <h2>Second tab</h2>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <header>
+      <h2>Price: $<%= @selene.price %></h2>
+      <p><%= @selene.description %></p>
+    </header>
+    <div id="masonry-grid" class="js-masonry"
+  data-masonry-options='{ "columnWidth": 450, "itemSelector": ".item", "gutter": 10, "isFitWidth": "true" }'>
+      <% @selene_images.each do |img| %>
+        <div class="empty"></div>
+        <div class="item">
+          <%= image_tag img %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div class="tab" id="tab3">
-      <h2>Third tab</h2>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    <header>
+      <h2>Price: $<%= @rhea.price %></h2>
+      <p><%= @rhea.description %></p>
+    </header> 
+    <div id="masonry-grid" class="js-masonry"
+  data-masonry-options='{ "columnWidth": 450, "itemSelector": ".item", "gutter": 10, "isFitWidth": "true" }'> 
+      <% @rhea_images.each do |img| %>
+        <div class="empty"></div>
+        <div class="item">
+          <%= image_tag img %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

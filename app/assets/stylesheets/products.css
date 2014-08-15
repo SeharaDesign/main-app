@@ -1,21 +1,37 @@
-.container {
-  background-color: #f7faf9;
-  width: 90%;
-  min-height: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 10%;
+/* Top Level Element Styling */
+
+body {
+  color: #e2e2e3;
+  font-family: 'Poiret One', cursive;
+  font-weight: bolder;
 }
 
-.container h1 {
-  font-size: 3.500em;
-  color: #3232ff;
-  font-weight: 900;
-  padding-top: 3%;
+h1 {
+  margin: 0;
+  color: #2b9e0e;
 }
 
-.container p {
-  padding: 2% 10%;
+h2 {
+  font-size: 2.00em;
+}
+
+p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 1.500em;
+  color: #0c2c04;
+  font-weight: bolder;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #e2e2e3;
+}
+
+a:visited {
+  color: #e2e2e3;
 }
 
 html, body {
@@ -23,21 +39,252 @@ html, body {
 }
 
 img {
+  border-radius: 3px;
+}
+
+blockquote {
+  font-size: 1.250em;
+  color: #0c2c04;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Encapsulating Containers */
+
+.dark-container {
+  background: url('dark_wood.png');
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.dark-container h1 {
+  font-size: 4.500em;
+  font-weight: 900;
+  padding-top: 3%;
+}
+
+.dark-container p {
+  padding: 2% 10%;
+}
+
+.light-container {
+  background: url('white_wall_hash.png');
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%; 
+}
+
+/* Header Banner */
+
+#opening_header {
+  background: url('white_wall_hash.png');
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15% 0;
+  -moz-box-shadow: 0 0 5px 0  #ccc;
+  -webkit-box-shadow: 0 0 5px 0 #ccc;
+  box-shadow: 5px 5px 5px 0 #c2c2c2;
+  border-bottom: 5px solid #fff;
+}
+
+.banner h2 {
+  font-size: 4.000em;
+  color: #580818;
+}
+
+.banner i::before {
+  color: #2b9e0e;
+  font-size: 50px;
+  margin: 0; 
+}
+
+/* Shop Interface */
+
+.showcase {
+  width: 40%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 5% 3%;
+}
+
+.showcase img {
+  width: 100%;
+  border: 1px solid white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.showcase h2 {
+  font-size: 2.750em;
+  padding: 5% 0;
+  border: 1px solid white;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.showcase:hover {
+  color: #cd1237;
+  text-shadow: 2px 2px #580818;
+}
+
+#couture {
+  background-color: #2b9e0e;
+  color: white;
+  padding: 5% 0;
+  margin-top: 10%;
+  -moz-box-shadow: inset 0 0 10px 5px #0e3404;
+  -webkit-box-shadow: inset 0 0 10px 5px#0e3404;
+  box-shadow: inset 0 0 10px 5px #0e3404;
+}
+
+#couture h1 {
+  width: 70%;
+  font-size: 3.00em;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+}
+
+#couture i::before {
+  font-size: 6.00em;
+  color: #580818;
+
+}
+
+#products p {
+  color: #2b9e0e;
+  font-size: 1.250em;
+  width: 50%;
+  margin: 5% auto 0;
+  font-weight: 100;
+}
+
+/*#products header div {
+  display: inline-block;
+  width: 40%;
+}
+
+#products header p {
+  display: inline-block;
+}*/
+
+/* About Sehara - Bios */
+
+#about div {
+  width: 40%;
+  display: inline-block;
+  padding: 3%;
+}
+
+#about h1 {
+  font-size: 4.000em;
+  color: #580818;
+}
+
+#about div h2 {
+  font-size: 3.000em;
+  color: #580818;
+}
+
+#about div p {
+  font-weight: lighter;
+  font-size: 1.150em;
+}
+
+#about > div:first-of-type {
+  border-right: 2px solid darkgrey;
+}
+
+#about blockquote {
+  margin: 5% auto;
   width: 75%;
 }
 
+#about blockquote h2 {
+  font-size: 1.7500em;
+  margin-bottom: 3%;
+}
+
+blockquote > h2:first-of-type {
+  text-align: right;
+  padding: 5% 10% 0 0;
+}
+
+/* Masonry.js display for Product images */ 
+
+.js-masonry {
+  margin: 0 auto;
+  padding: 10% 0;
+
+}
+
+.grid-sizer {
+  width: 100px;
+}
+
+.item img {
+  width: 500px;
+}
+
+.item {
+  margin-bottom: 2%;
+  opacity: 0.25;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.item:hover {
+  opacity: 1.0;
+  -webkit-transform:scale(1.25); /* Safari and Chrome */
+  -moz-transform:scale(1.25); /* Firefox */
+  -ms-transform:scale(1.25); /* IE 9 */
+  -o-transform:scale(1.25); /* Opera */
+   transform:scale(1.25);
+}
+
+/*.tab header h2 {
+  display: inline-block;
+  width: 20%;
+  vertical-align: center;
+  padding: 5% 5%;
+}
+
+.tab header p {
+  display: inline-block;
+  width: 40%;
+  padding: 0;
+  vertical-align: top;
+}
+
+.tab img {
+  width: 450px;
+  border-radius: 5px;
+}*/
+
+/* Tabbed Interface for each Product */
+/*
 .tab {
     display: none;
 }
+
 .tabs {
-    /*float: left;*/
     border-bottom: 1px solid #ccc;
-    /*width: 100%;*/
     margin: 5% auto;
     list-style: none;
 }
 .tabs li {
-/*    float: left;*/
+
     display: inline-block;
     margin-right: 16px;
     padding: 10px 15px;

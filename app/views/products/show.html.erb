@@ -1,0 +1,23 @@
+<%= render partial: "layouts/nav" %>
+
+<div class="dark-container" id="products">
+  
+  <header>
+    <div>
+      <h1><%= @product.name %></h1>
+      <h2>Price: $<%= @product.price %></h2>
+    </div>
+    <p><%= @product.description %></p>
+  </header>
+  
+  <section id="masonry-grid" class="js-masonry"
+data-masonry-options='{ "columnWidth": ".grid-sizer", "itemSelector": ".item", "gutter": 5, "isFitWidth": "true" }'>
+    <div class="grid-sizer"></div>
+    <% @images.each do |img| %>
+      <div class="item">
+        <%= image_tag img %>
+      </div>
+    <% end %>
+  </section>
+
+</div>

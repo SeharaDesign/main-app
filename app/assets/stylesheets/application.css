@@ -12,4 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.bxslider
+ *= require_tree ../../../vendor/assets/icons/.
  */
