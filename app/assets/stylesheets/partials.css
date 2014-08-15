@@ -1,0 +1,53 @@
+.nav {
+  opacity: 0.75;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  position: fixed;
+  width: 100%;
+  background-color: #0e3404;
+  z-index: 1000;
+}
+
+.nav:hover {
+  opacity: 1.0;
+}
+
+.nav ul {
+  margin: 0;
+  display: inline;
+}
+
+.nav li:first-child {
+  font-family: Meddon, cursive;
+  font-size: 1.700em;
+}
+
+.nav li:first-child a {
+  color: #2b9e0e;
+}
+
+.nav li {
+  color: white;
+  display: inline-block;
+  padding: 2%;
+  padding-left: 0;
+  font-size: 1.400em;
+  font-weight: 900;
+}
+
+.nav i::before {
+  color: #2b9e0e;
+  font-size: 50px;
+  margin: 0; 
+}
+
+.nav aside {
+  display: inline-block;
+  float: right;
+  margin: 2% 2% 0 0;
+}
+
+

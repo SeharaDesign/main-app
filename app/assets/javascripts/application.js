@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require masonry.min
+//= require imagesloaded.min
+//= require jquery.bxslider.min
+
