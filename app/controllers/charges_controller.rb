@@ -1,14 +1,20 @@
 class ChargesController < ApplicationController
-  
+  helper ChargesHelper
+
   def new
   end
 
   def create
 
-    # Will get routed here from products/:id/checkout, will need to create Customer model obj. and pass product price params here.
+    # Create DB records
+    @customer = Customer.find_or_create_by(customer_params)
+    @order = Order.create(order_params)
+    @customer.orders << @order
+    @product = Product.recently_purchased(@order)
+    @product.update_units_sold
 
-     # Amount in cents
-    @amount = 500
+    # Stripe card processing
+    amount = Product.calculate_price_in_cents(@product)
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
@@ -17,7 +23,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => @amount,
+      :amount      => amount,
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
@@ -26,6 +32,16 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to charges_path
   
+  end
+
+  private
+
+  def customer_params
+    params.require(:customer).permit!
+  end
+
+  def order_params
+    params.require(:order).permit!
   end
 
 end

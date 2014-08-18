@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140815023719) do
+ActiveRecord::Schema.define(version: 20140816144642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customers", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", force: true do |t|
     t.string   "source"
@@ -24,6 +37,16 @@ ActiveRecord::Schema.define(version: 20140815023719) do
   end
 
   add_index "images", ["product_id"], name: "index_images_on_product_id", using: :btree
+
+  create_table "orders", force: true do |t|
+    t.integer  "customer_id"
+    t.integer  "product_id"
+    t.date     "date_of_event"
+    t.boolean  "complete",      default: false
+    t.boolean  "shipped",       default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"

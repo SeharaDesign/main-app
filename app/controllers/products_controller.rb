@@ -11,5 +11,7 @@ class ProductsController < ApplicationController
 
   def checkout
     @product = Product.find(params[:id])
+    @customer = Customer.new
+    @order = Order.new
   end
 end
