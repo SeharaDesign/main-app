@@ -68,3 +68,12 @@
   vertical-align: text-top;
 }
 
+.footer {
+  width: 100%;
+  background-color: #0e3404;
+}
+
+.footer aside {
+  padding: 2% 5%;
+}
+
