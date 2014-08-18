@@ -1,3 +1,37 @@
-.admin-container header {
+.admin-container {
+  margin: 0 auto;
+  padding: 5% 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
   width: 80%;
+}
+
+.admin-container header {
+  text-align: center;
+}
+
+.admin-container h2 {
+  font-size: 1.250em;
+  color: black;
+}
+
+#dashboard {
+  text-align: center;
+}
+
+#dashboard div {
+  margin: 0 auto;
+  width: 45%;
+  height: 150px;
+  padding: 5% 2% 5% 0;
+}
+
+#dashboard div h1 {
+  text-align: center;
+}
+
+
+
+.admin-container p {
+  font-size: 1.000em;
 }
