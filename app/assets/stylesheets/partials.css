@@ -20,6 +20,21 @@
   display: inline;
 }
 
+#buy {
+  border: 1px solid white;
+  padding: 3% 4%;
+  margin-right: 5%;
+  vertical-align: 40%;
+  font-size: 1.250em;
+  border-radius: 5px;
+  background-color: #580818;
+}
+
+#buy:hover {
+  background-color: #2b9e0e;
+  border: 2px solid black;
+}
+
 .nav li:first-child {
   font-family: Meddon, cursive;
   font-size: 1.700em;
@@ -48,6 +63,8 @@
   display: inline-block;
   float: right;
   margin: 2% 2% 0 0;
+  width: 40%;
+  text-align: right;
+  vertical-align: text-top;
 }
-
 

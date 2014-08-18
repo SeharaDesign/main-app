@@ -1,11 +1,13 @@
 <div class="nav">
   <ul>
-    <li><%= link_to "Sehara Design", products_path %></li>
-    <li>Reviews</li>
-    <li>FAQs<li>
+    <li><%= link_to "Sehara Design", root_path %></li>
   </ul>
+    
   
   <aside>
+    <% if @product %>
+      <%= link_to "Want It?", checkout_product_path, id: "buy" %>
+    <% end %>
     <i class="flaticon-pinterest10"></i>
     <i class="flaticon-yelp6"></i>
     <i class="flaticon-facebook29"></i>

@@ -1,0 +1,61 @@
+<%= render partial: "layouts/nav" %>
+
+<div class="dark-container">
+
+  <h2>Purchase your <%= @product.name %> below...</h2> 
+
+  <%= form_for [@product, @order, @customer], url: charges_path do |f| %>
+
+    <%= fields_for @customer do |f| %>
+  
+      <%= field_set_tag "Step 1. Contact Info" do %>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, { autofocus: true, placeholder: "Maria" } %><br>
+
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, { placeholder: "Papadopoulos" } %><br>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, { placeholder: "m.papadopoulos@gmail.com" } %><br>
+
+        <%= f.label :phone_number %>
+        <%= f.telephone_field :phone, { placeholder: "312-555-1234" } %><br>
+      <% end %>
+      
+      <%= field_set_tag "Step 2. Shipping Address" do %>
+        <%= f.label :street_address %>
+        <%= f.text_field :street_address, { placeholder: "Ex. 123 N. State St. Apt. 2" } %><br>
+
+        <%= f.label :city %>
+        <%= f.text_field :city, { placeholder: "Chicago" }%><br>
+
+        <%= f.label :state %>
+        <%= f.text_field :state, { placeholder: "IL" } %><br>
+
+        <%= f.label :zip %>
+        <%= f.text_field :zip, { placeholder: "60647" } %><br>
+      <% end %>
+
+    <% end %>
+
+    <%= fields_for @order do |f| %>
+
+      <%= field_set_tag "Step 3. When is the event?" do %>
+        <%= f.label :date_of_event %>
+        <%= f.date_field :date_of_event %><br>
+
+        <%= f.hidden_field :product_id, value: @product.id %>
+      <% end %>
+
+    <% end %>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-name="Sehara Design"
+          data-description="Free Shipping included with <%= @product.name %>!" 
+          data-allow-remember-me="false"
+          data-image="<%= @product.showcase_image %>"
+          data-amount="<%= (@product.price * 100) %>"></script>
+
+  <% end %>
+</div>

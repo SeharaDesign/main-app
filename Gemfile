@@ -38,6 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Stripe API payment processor
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 group :test, :development do
    gem 'rspec-rails'
    gem 'capybara'

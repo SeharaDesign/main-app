@@ -1,0 +1,30 @@
+<div class="dark-container">
+  
+  <div id="receipt">
+  
+    <header>
+      <h1>Thanks for your purchase :)</h1>
+      <h2>Below is a receipt for your records:</h2>
+      <h2>FYI, you should also receive a receipt from Stripe, our merchant card processor for the transaction.</h2>
+    </header>
+
+    <section>
+      <h1>Shipping Details:</h2>
+      <h2><%= full_name(@customer) %></h2>
+      <h2><%= @customer.street_address %></h2>
+      <h2><%= shipping_address(@customer) %>
+    </section>
+
+    <section>
+      <h1>Order Details:</h1>
+      <h2><%= name_and_price(@product) %></h2>
+      <h2>Expect delivery at least two weeks before <%= @order.date_of_event %>, the date of your event</h2>
+    </section>
+    
+    <footer>
+      <h1><%= link_to "Go back to Sehara", root_path %>, or close your browser window.</h1> 
+    </footer>
+
+  </div>
+
+</div>

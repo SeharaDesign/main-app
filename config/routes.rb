@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   root 'products#index'
   get 'welcome/index'
 
-  resources :products
+  resources :products do
+    member do
+      get 'checkout'
+    end
+  end
+
+  resources :charges, only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Example of regular route:
