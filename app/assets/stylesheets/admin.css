@@ -13,6 +13,11 @@
 .admin-container h2 {
   font-size: 1.250em;
   color: black;
+  margin-top: 5%;
+}
+
+.admin-container p {
+  font-size: 1.000em;
 }
 
 #dashboard {
@@ -21,8 +26,9 @@
 
 #dashboard div {
   margin: 0 auto;
+  display: inline-block;
   width: 45%;
-  height: 150px;
+  height: 200px;
   padding: 5% 2% 5% 0;
 }
 
@@ -30,8 +36,29 @@
   text-align: center;
 }
 
-
-
-.admin-container p {
-  font-size: 1.000em;
+#dashboard i::before {
+  font-size: 10.00em;
+  display: block;
+  color: #580108;
+  padding-top: 5%;
+  margin: 0;
 }
+
+#admin-nav {
+  width: 100%;
+  background-color: #3f5f7a;
+  padding: 1%;
+}
+
+#admin-nav i::before {
+  font-size: 3.000em;
+  padding-right: 3%;
+}
+
+#admin-nav li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1% 3%;
+  font-size: 1.250em;
+}
+
