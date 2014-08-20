@@ -1,0 +1,38 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container orders">
+
+  <% if flash[:notice] %>
+    <%= content_tag :div, flash[:notice], class: "flash-hash" %>
+  <% end %>
+  
+  <h1>Order Summary</h1>
+
+  <header>
+    <ul>
+      <li>Product</li>
+      <li>Customer</li>
+      <li>Event Date</li>
+      <li>Complete?</li>
+      <li>Shipped?</li>
+      <li>Actions</li>
+    </ul>
+  </header>
+
+  <section>
+    <% @orders.each do |order| %>
+      <ul>
+        <li><%= order.product.name %></li>
+        <li><%= order.customer.first_name %> <%= order.customer.last_name %></li>
+        <li><%= order.date_of_event %></li>
+        <li><%= order.order_completed? %></li>
+        <li><%= order.order_shipped? %></li>
+        <li><%= link_to "Edit", edit_admin_order_path(order) %> | <%= link_to "Add", new_admin_order_path %> | <%= link_to "Delete", admin_order_path(order), method: :delete, data: { confirm: "Are you sure you want to delete this order?" } %></li>
+      </ul>
+    <% end %>
+
+    
+  </section>
+
+
+</div>

@@ -4,7 +4,7 @@
 
   <h2>Purchase your <%= @product.name %> below...</h2> 
 
-  <%= form_for [@product, @order, @customer], url: charges_path do |f| %>
+  <%= form_for [@product, @order, @shipping_address, @customer], url: charges_path do |f| %>
 
     <%= fields_for @customer do |f| %>
   
@@ -21,6 +21,9 @@
         <%= f.label :phone_number %>
         <%= f.telephone_field :phone, { placeholder: "312-555-1234" } %><br>
       <% end %>
+    <% end %>
+
+    <%= fields_for @shipping_address do |f| %>
       
       <%= field_set_tag "Step 2. Shipping Address" do %>
         <%= f.label :street_address %>
@@ -35,7 +38,6 @@
         <%= f.label :zip %>
         <%= f.text_field :zip, { placeholder: "60647" } %><br>
       <% end %>
-
     <% end %>
 
     <%= fields_for @order do |f| %>

@@ -9,10 +9,10 @@ Rails.application.routes.draw do
 
   resources :charges, only: [:new, :create]
 
-  resources :admin, only:[:index]
+  resources :admin, only: [:index]
 
   namespace :admin do 
-    resources :orders
+    resources :orders, except: [:show]
   end
 
 

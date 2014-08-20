@@ -8,7 +8,9 @@ class ChargesController < ApplicationController
 
     # Create DB records
     @customer = Customer.find_or_create_by(customer_params)
+    @shipping_address = ShippingAddress.create(shipping_params)
     @order = Order.create(order_params)
+    @customer.shipping_addresses << @shipping_address
     @customer.orders << @order
     @product = Product.recently_purchased(@order)
     @product.update_units_sold
@@ -38,6 +40,10 @@ class ChargesController < ApplicationController
 
   def customer_params
     params.require(:customer).permit!
+  end
+
+  def shipping_params
+    params.require(:shipping_address).permit!
   end
 
   def order_params

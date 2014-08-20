@@ -11,8 +11,8 @@
     <section>
       <h1>Shipping Details:</h2>
       <h2><%= full_name(@customer) %></h2>
-      <h2><%= @customer.street_address %></h2>
-      <h2><%= shipping_address(@customer) %>
+      <h2><%= @shipping_address.street_address %></h2>
+      <h2><%= shipping_address(@shipping_address) %>
     </section>
 
     <section>

@@ -13,5 +13,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @customer = Customer.new
     @order = Order.new
+    @shipping_address = ShippingAddress.new
   end
 end

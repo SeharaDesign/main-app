@@ -4,8 +4,7 @@ class AdminController < ApplicationController
 
   before_action :authenticate
 
-  def index
-    
+  def index  
   end
 
   private
