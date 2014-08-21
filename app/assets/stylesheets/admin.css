@@ -70,6 +70,13 @@
   color: white;
   background-color: #580818;
   font-size: 1.250em;
-  border: 1px solid black; 
+  border: 2px solid black;
+  z-index: 5000; 
+}
+
+.flash-hash p {
+  color: white;
+  font-size: 1.250em;
+  margin: 0;
 }
 

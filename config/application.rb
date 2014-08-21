@@ -15,6 +15,15 @@ Bundler.require(*Rails.groups)
 
 module Sehara
   class Application < Rails::Application
+    config.watchable_dirs['lib'] = [:rb]
+    
+    # Loads lib folder for additional modules and classes
+    # NOT WORKING NEEDS AN ANSWER ************************
+
+    # config.autoload_paths << Rails.root.join('lib')
+
+    #************************************
+
     # config.assets.paths << Rails.root.join("vendor", "assets", "icons")
     # app.config.assets.precompile << /\.(?:svg|eot|woff|ttf)$//
     # Settings in config/environments/* take precedence over those specified here.
