@@ -6,10 +6,8 @@
 
   <%= form_for [:admin, @order] do |f| %>
 
-  <%= render partial: "admin/orders/form", locals: { order: @order, f: f } %>
-    
+    <%= render partial: "admin/orders/form", locals: { order: @order, f: f } %>
   
-
     <%= f.submit "Create Order" %>
 
   <% end %>

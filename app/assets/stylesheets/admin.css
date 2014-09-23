@@ -62,6 +62,19 @@
   font-size: 1.250em;
 }
 
+#admin-nav span {
+  font-family: Meddon, cursive;
+  font-size: 1.700em;
+}
+
+#admin-nav span {
+  color: #2b9e0e;
+}
+
+#admin-nav span:hover {
+  color: white;  
+}
+
 .flash-hash {
   margin: 0 auto;
   text-align: center;

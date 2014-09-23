@@ -1,12 +1,12 @@
 <div id="admin-nav">
+
   <ul>
-    <%= link_to admin_index_path do %>
-      <i class="flaticon-dwelling1"></i>
-    <% end %>
+    <span>Sehara Design</span>
+    <li><%= link_to "Dashboard", admin_index_path %><li>
     <li><%= link_to "Orders", admin_orders_path %></li>
-    <li>Customers</li>
+    <li><%= link_to "Customers", admin_customers_path %></li>
     <li>Inventory</li>
-    <li>Issues</li>
+    <li><%= link_to "Issues", admin_issues_path %></li>
   </ul>
 
 </div>

@@ -1,5 +1,7 @@
 class Customer < ActiveRecord::Base
 
+  # accepts_nested_attributes_for :shipping_addresses
+
   has_many :shipping_addresses
   has_many :orders
   has_many :products, through: :orders

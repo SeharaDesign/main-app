@@ -1,0 +1,37 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container issues">
+
+  <% if flash[:notice] || flash[:success] %>
+    <%= content_tag :div, flash[:notice] || flash[:success] , class: "flash-hash" %>
+  <% end %>
+  
+  <h1>Issue Summary</h1>
+  <h3><%= link_to "+ Add a new issue", new_admin_issue_path %></h3>
+
+  <header>
+    <ul>
+      <li>Title</li>
+      <li>Summary</li>
+      <li>Priority</li>
+      <li>Complete?</li>
+      <li>Actions</li>
+    </ul>
+  </header>
+
+  <section>
+    <% @issues.each do |issue| %>
+      <ul>
+        <li><%= issue.title %></li>
+        <li><%= issue.body %></li>
+        <li><%= issue.priority %></li>
+        <li><%= issue.completed? %></li>
+        <li><%= link_to "Edit", edit_admin_issue_path(issue) %> | <%= link_to "Delete", admin_issue_path(issue), method: :delete, data: { confirm: "Are you sure you want to delete this issue?" } %></li>
+      </ul>
+    <% end %>
+
+    
+  </section>
+
+
+</div>

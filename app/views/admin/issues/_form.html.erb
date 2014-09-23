@@ -1,0 +1,13 @@
+<%= f.label "Title:" %>
+<%= f.text_field "title" %><br>
+
+<%= f.label "Summary:" %>
+<%= f.text_area "body", { placeholder: "Tell me more detail." } %><br>
+
+<%= f.label "Priority:" %>
+<%= f.select "priority", options_for_select([["High", "High"], ["Medium", "Medium"], ["Low", "Low"]]), { prompt: "Select a priority." } %><br>
+
+<% if issue %>  
+  <%= f.label "Check if  complete" %>
+  <%= f.check_box "complete" %><br>
+<% end %>

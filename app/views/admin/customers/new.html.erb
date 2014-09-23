@@ -1,0 +1,15 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container customers">
+  
+  <h1>Add a New Customer</h1>
+
+  <%= form_for [:admin, @customer] do |f| %>
+
+    <%= render partial: "admin/customers/form", locals: { customer: @customer, f: f } %>
+  
+    <%= f.submit "Add Customer" %>
+
+  <% end %>
+
+</div>
