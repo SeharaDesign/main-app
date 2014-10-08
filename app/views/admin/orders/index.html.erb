@@ -1,12 +1,13 @@
 <%= render partial: "layouts/admin_nav" %>
 
-<div class="admin-container orders">
+<div class="admin-container dash-sections">
 
   <% if flash[:notice] %>
     <%= content_tag :div, flash[:notice], class: "flash-hash" %>
   <% end %>
   
   <h1>Order Summary</h1>
+  <h3><%= link_to "+ Add a new order", new_admin_order_path %></h3>
 
   <header>
     <ul>
@@ -27,7 +28,7 @@
         <li><%= order.date_of_event %></li>
         <li><%= order.order_completed? %></li>
         <li><%= order.order_shipped? %></li>
-        <li><%= link_to "Edit", edit_admin_order_path(order) %> | <%= link_to "Add", new_admin_order_path %> | <%= link_to "Delete", admin_order_path(order), method: :delete, data: { confirm: "Are you sure you want to delete this order?" } %></li>
+        <li><%= link_to "Edit", edit_admin_order_path(order) %> | <%= link_to "Delete", admin_order_path(order), method: :delete, data: { confirm: "Are you sure you want to delete this order?" } %></li>
       </ul>
     <% end %>
 
