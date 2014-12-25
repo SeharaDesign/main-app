@@ -1,0 +1,15 @@
+<%= f.label "Who's it for?" %>
+<%= f.select "customer_id", options_for_select(customers.map { |c| [c.email, c.id] }), { prompt: "Select a customer email" } %><br>
+
+<%= f.label "Which product?" %>
+<%= f.select "product_id", options_for_select(products.map { |p| [p.name, p.id] }), { prompt: "Select a product" } %><br>
+
+<%= f.label "When is the event?" %>
+<%= f.date_field "date_of_event" %><br>
+  
+<%= f.label "Check if order complete" %>
+<%= f.check_box "complete" %><br>
+
+<%= f.label "Check if order been shipped" %>
+<%= f.check_box "shipped" %><br>
+

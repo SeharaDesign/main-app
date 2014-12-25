@@ -1,5 +1,8 @@
 <header id="opening_header">
   <section class="banner">
+    <% if flash[:success] %>
+      <%= content_tag :p, flash[:success], class: "flash-hash" %>
+    <% end %>
     <h2>A WEDDING BOUTIQUE</h2>
     <ul class="bxslider">
       <li>

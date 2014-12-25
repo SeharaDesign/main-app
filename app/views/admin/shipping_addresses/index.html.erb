@@ -1,0 +1,27 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container dash-sections">
+
+  <% if flash[:notice] || flash[:success] %>
+    <%= content_tag :div, flash[:notice] || flash[:success] , class: "flash-hash" %>
+  <% end %>
+
+  <h1>Addresses for <%= @customer.first_name %> <%= @customer.last_name %></h1>
+  <h3><%= link_to "+ Add a new shipping address", new_admin_customer_shipping_address_path(@customer) %></h3>
+
+  <% if @addresses.any? %>
+    <% @addresses.each do |address| %>
+      <section>
+        <h2>Shipping Address (updated: <%= address.updated_at.strftime("%B %d, %Y") %>)</h2>
+        <hr>
+        <p><%= address.street_address %></p>
+        <p><%= address.city %>, <%= address.state %></p>
+        <p><%= address.zip %>, <%= address.country %></p>
+        <%= link_to "Edit", edit_admin_customer_shipping_address_path(@customer.id, address.id) %> | <%= link_to "Delete", admin_customer_shipping_address_path(@customer, address.id), method: :delete %>
+        <hr>
+      </section>
+    <% end %>
+  <% else %>
+    <h2>Currently no addresses.</h2>
+  <% end %>
+</div>

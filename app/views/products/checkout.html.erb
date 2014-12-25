@@ -2,9 +2,17 @@
 
 <div class="dark-container">
 
+  <% if flash[:notice] %>
+    <div class="flash-hash">
+      <% flash[:notice].each do |notice| %>
+        <%= content_tag :p, notice %>
+      <% end %>
+    </div>
+  <% end %>
+
   <h2>Purchase your <%= @product.name %> below...</h2> 
 
-  <%= form_for [@product, @order, @customer], url: charges_path do |f| %>
+  <%= form_for [@product, @shipping_address, @customer, @order], url: charges_path do |f| %>
 
     <%= fields_for @customer do |f| %>
   
@@ -18,9 +26,15 @@
         <%= f.label :email %>
         <%= f.email_field :email, { placeholder: "m.papadopoulos@gmail.com" } %><br>
 
+        <%= f.label :confirm_email %>
+        <%= f.email_field :email_confirmation, { placeholder: "It's our primary way to communicate" } %><br>
+
         <%= f.label :phone_number %>
         <%= f.telephone_field :phone, { placeholder: "312-555-1234" } %><br>
       <% end %>
+    <% end %>
+
+    <%= fields_for @shipping_address do |f| %>
       
       <%= field_set_tag "Step 2. Shipping Address" do %>
         <%= f.label :street_address %>
@@ -35,7 +49,6 @@
         <%= f.label :zip %>
         <%= f.text_field :zip, { placeholder: "60647" } %><br>
       <% end %>
-
     <% end %>
 
     <%= fields_for @order do |f| %>

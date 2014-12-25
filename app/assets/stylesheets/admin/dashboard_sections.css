@@ -1,0 +1,77 @@
+.dash-sections {
+  color: black;
+  width: 90%;
+}
+
+.dash-sections ul {
+  text-align: left;
+  border-bottom: 1px solid darkgrey;
+  padding: 0;
+}
+
+.dash-sections li {
+  display: inline-block;
+  width: 15%;
+  padding: 1% 0;
+  text-align: center;
+}
+
+.dash-sections a:link {
+  color: darkgrey;
+}
+
+.dash-sections a:visited {
+  color: darkgrey;
+}
+
+.dash-sections a:hover {
+  color: #2a9d0d;
+}
+
+.dash-sections label {
+  font-size: 1.250em;
+  width: 30%;
+  text-align: left;
+}
+
+.dash-sections input, select {
+  display: block;
+}
+
+.dash-sections form {
+  margin: 2%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 2% 4%;
+}
+
+.dash-sections input {
+  width: 100%;
+  height: 45px;
+  margin: 1% 0;
+  font-size: 1.500em;
+  text-indent: 10px;
+}
+
+.dash-sections textarea {
+  padding: 1%;
+  width: 100%;
+  height: 70px;
+  margin: 1% 0;
+  font-size: 1.2500em;
+}
+
+.dash-sections select {
+  margin: 1% 0;
+  width: 30%;
+  height: 20px;
+}
+
+.dash-sections input[type='submit'] {
+  background-color: #0e3404;
+  color: white;
+  height: 45px;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
+}

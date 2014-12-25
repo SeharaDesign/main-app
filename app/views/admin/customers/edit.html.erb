@@ -1,0 +1,14 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container dash-sections">
+  
+  <h1>Edit an existing customer</h1>
+
+  <%= form_for [:admin, @customer], method: "patch" do |f| %>
+    
+    <%= render partial: "admin/customers/form", locals: { customer: @customer, f: f } %>
+
+    <%= f.submit "Update Order" %>
+
+  <% end %>
+</div>

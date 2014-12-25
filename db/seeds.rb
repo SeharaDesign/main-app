@@ -24,14 +24,14 @@ rhea = Product.create!(
   showcase_image: "https://s3-us-west-2.amazonaws.com/sehara/rhea/rhea10.jpg"
 )
 
-21.times do |i|
+20.times do |i|
   Image.create!(
     source: "https://s3-us-west-2.amazonaws.com/sehara/hera/hera#{i + 1}.jpg",
     product_id: hera.id
   )
 end
 
-28.times do |i|
+27.times do |i|
   Image.create!(
     source: "https://s3-us-west-2.amazonaws.com/sehara/selene/selene#{i + 1}.jpg",
     product_id: selene.id

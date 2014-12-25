@@ -4,8 +4,8 @@ module ChargesHelper
     "#{customer.first_name} #{customer.last_name}" 
   end
 
-  def shipping_address(customer)
-    "#{customer.city}, #{customer.state} #{customer.zip}"
+  def shipping_address(shipping_address)
+    "#{shipping_address.city}, #{shipping_address.state} #{shipping_address.zip}"
   end
 
   def name_and_price(product)

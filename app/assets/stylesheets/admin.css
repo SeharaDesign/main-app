@@ -1,0 +1,103 @@
+.admin-container {
+  margin: 0 auto;
+  padding: 5% 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  width: 80%;
+}
+
+.admin-container header {
+  text-align: center;
+}
+
+.admin-container h2 {
+  font-size: 1.250em;
+  color: black;
+  margin-top: 5%;
+}
+
+.admin-container p {
+  font-size: 1.000em;
+}
+
+#dashboard {
+  text-align: center;
+}
+
+#dashboard div {
+  margin: 0 auto;
+  display: inline-block;
+  width: 45%;
+  height: 200px;
+  padding: 5% 2% 5% 0;
+}
+
+#dashboard div h1 {
+  text-align: center;
+}
+
+#dashboard i::before {
+  font-size: 10.00em;
+  display: block;
+  color: #580108;
+  padding-top: 5%;
+  margin: 0;
+}
+
+#admin-nav {
+  width: 100%;
+  background-color: #0e3404;
+  padding: 1%;
+}
+
+#admin-nav i::before {
+  font-size: 3.000em;
+  padding-right: 3%;
+}
+
+#admin-nav li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 1.5%;
+  font-size: 1.250em;
+  border-left: 2px solid #2b9e0e;
+}
+
+#admin-nav ul {
+  text-align: left;
+  margin: 0 auto;
+  display: inline;
+}
+
+#admin-nav span {
+  font-family: Meddon, cursive;
+  font-size: 1.700em;
+  margin-left: 5%
+}
+
+#admin-nav span {
+  color: #2b9e0e;
+}
+
+#admin-nav span:hover {
+  color: white;  
+}
+
+.flash-hash {
+  margin: 0 auto;
+  text-align: center;
+  padding: 2% 4%;
+  width: 40%;
+  color: white;
+  background-color: #580818;
+  font-size: 1.250em;
+  border: 2px solid black;
+  z-index: 5000; 
+}
+
+.flash-hash p {
+  color: white;
+  font-size: 1.250em;
+  margin: 0;
+}
+

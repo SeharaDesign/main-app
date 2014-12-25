@@ -1,0 +1,16 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container dash-sections">
+  
+  <h1>Create a new issue</h1>
+
+  <%= form_for [:admin, @issue] do |f| %>
+
+  <%= render partial: "admin/issues/form", locals: { issue: nil , f: f } %>
+    
+  
+
+    <%= f.submit "Create Issue" %>
+
+  <% end %>
+</div>

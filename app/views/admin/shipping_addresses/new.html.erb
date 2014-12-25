@@ -1,0 +1,14 @@
+<%= render partial: "layouts/admin_nav" %>
+
+<div class="admin-container dash-sections">
+  
+  <h1>Add a new address</h1>
+
+  <%= form_for [:admin, :customer, @address], method: :patch do |f| %>
+
+    <%= render partial: "admin/shipping_addresses/form", locals: { address: @address, f: f } %>
+  
+    <%= f.submit "Add Shipping Address" %>
+
+  <% end %>
+</div>
